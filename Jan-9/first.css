@@ -1,0 +1,73 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+h1{
+    color: white;
+}
+h5{
+    color: white;
+    margin: 0px;
+}
+p{
+    color: rgb(116, 153, 155);
+}
+.grid{
+    display: grid;
+    background-color: rgb(1,67,66);
+    row-gap: 20px;
+    width: 900px;
+    height: 600px;
+    padding: 80px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr 1fr;
+}
+.grid_item1{
+    width: fit-content;
+    height: fit-content;
+    grid-column: 1/6;
+    grid-row: 1/1;
+}
+.grid_item2{
+    width: 80px;
+    height: 80px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;   
+}
+.grid_item3{
+    width: fit-content;
+    height: fit-content;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;   
+}
+.grid_item4{
+    width: fit-content;
+    height: fit-content;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;   
+}
+.grid_item5{
+    width: fit-content;
+    height: fit-content;
+    grid-column: 4/5;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;   
+}
+.grid_item6{
+    width: fit-content;
+    height: fit-content;
+    grid-column: 5/6;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: center;   
+}
