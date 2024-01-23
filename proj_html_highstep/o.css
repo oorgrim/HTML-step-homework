@@ -54,7 +54,6 @@ body {
     width: 100%;
 }
 
-/* Optional: make the navbar background transparent if needed */
 .navbar {
     background: transparent;
 }
@@ -73,28 +72,24 @@ nav {
     left: 300px;
 }
 
-/* Added styles for the new page */
 .new-page {
-    /* background-color: #87CEEB;  */
     background-color: #a4cfe5;
     padding: 50px;
     height: 400px;
 }
 
 .new-page h1 {
-    color: white; /* White text color */
+    color: white;
 }
 
 .new-page p {
-    color: white; /* White text color */
+    color: white; 
 }
 
-/* Added styles to prevent horizontal scrolling */
 body {
     overflow-x: hidden;
 }
 
-/* Added styles to make the first-page image cover the entire screen */
 .first-page {
     position: relative;
     width: 100%;
@@ -137,16 +132,16 @@ img {
 
 .characters {
     display: flex;
-    justify-content: flex-start; /* Выравнивание содержимого слева */
-    align-items: center; /* Выравнивание элементов по вертикали */
+    justify-content: flex-start; 
+    align-items: center; 
 }
 
 #char1_img {
-    margin-right: 20px; /* Расстояние между изображением и текстом, регулируйте по вашему усмотрению */
+    margin-right: 20px; 
 }
 
 #char1_name {
-    font-size: 24px; /* Регулируйте размер шрифта по вашему усмотрению */
+    font-size: 24px; 
     font-weight: bold;
     color: rgb(0, 82, 109);
 }
