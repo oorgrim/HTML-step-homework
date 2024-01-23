@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    color: pink;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 18px;
+    color: pink;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: pink;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+/* Optional: make the navbar background transparent if needed */
+.navbar {
+    background: transparent;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+nav {
+    background: aqua;
+}
+
+.main {
+    position: relative;
+    top: 300px;
+    left: 300px;
+}
+
+/* Added styles for the new page */
+.new-page {
+    background-color: #87CEEB; /* Light blue background color */
+    padding: 50px;
+}
+
+.new-page h1 {
+    color: white; /* White text color */
+}
+
+.new-page p {
+    color: white; /* White text color */
+}
+
+/* Added styles to prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+}
+
+/* Added styles to make the first-page image cover the entire screen */
+.first-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#img_first_page {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+.first-page .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
