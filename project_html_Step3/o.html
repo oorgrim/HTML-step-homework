@@ -9,6 +9,9 @@
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <title>Document</title>
@@ -54,8 +57,8 @@
     <div class="first-page">
         <img id="img_first_page" src="photo_2024-01-21_17-24-31.jpg" alt="First Page Image">
         <div class="content">
-            <h2>Welcome to my website!</h2>
-            <p>the first page</p>
+            <h2 id="text1">Welcome to my website!</h2>
+            <p id="text2">the first page</p>
         </div>
         
     </div>
@@ -70,14 +73,14 @@
     <div class="new-page">
         <div class="wrap_logo_preview">
             <div class="logo_new_page"></div>
-            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <DIV class="lorem"><span class="lorem">Lorem ipsum dolor sit amet consectetur</span></DIV>
         </div>
             <h3 id="slogan">"The heart of a strong soul carries the bitterness of loss, but every tear is a drop of determination. The life of a strong girl: in every dark chapter there is a bright turn!"</h1>
         <p></p>
     </div>
 
 
-    <h2 id="abt_briefly">коротко о манхве</h2>
+    <h2 id="abt_briefly">GALLERY</h2>
     <div class="gallery">
         <img class="g_div" src="1.jpg" alt="">
         <img class="g_div" src="2.PNG"></img>
@@ -95,8 +98,11 @@
         <img id="charImg" src="char1.png" alt="">
         <div id="charInfo" class="char-info">
             <h1 id="charName" class="char_name">Erica</h1>
-            <p id="charDescription">На фоне разбитого города восстает сила – взгляд сильной девушки, пронзающий тьму утрат. Её глаза несут бескомпромиссную решимость, а волосы, развиваясь под ветром бурь, символизируют неукротимую энергию жизни. Она носит на себе боли и потери, но в каждой ране – след битвы, выигранной силой внутренней души. Стройная фигура девушки подчеркивает её готовность двигаться вперед, несмотря на ужасы прошлого. В её руках символы выживания и силы – лом и перо, напоминая, что даже в разрушении можно обрести новый порыв для жизни. На фоне города восходит рассвет, символизируя надежду и возможность нового начала. Вместе с сильной девушкой в этом комиксе мы узнаем, что даже в самых сложных моментах можно найти силу в себе и двигаться дальше.</p>
-        </div>
+            <!-- <p id="charDescription"></p> -->
+
+                
+                <p id="charDescription">На фоне разбитого города восстает сила – взгляд сильной девушки, пронзающий тьму утрат. Её глаза несут бескомпромиссную решимость, а волосы, развиваясь под ветром бурь, символизируют неукротимую энергию жизни. Она носит на себе боли и потери, но в каждой ране – след битвы, выигранной силой внутренней души. Стройная фигура девушки подчеркивает её готовность двигаться вперед, несмотря на ужасы прошлого. В её руках символы выживания и силы – лом и перо, напоминая, что даже в разрушении можно обрести новый порыв для жизни. На фоне города восходит рассвет, символизируя надежду и возможность нового начала. Вместе с сильной девушкой в этом комиксе мы узнаем, что даже в самых сложных моментах можно найти силу в себе и двигаться дальше.</p>
+              </div>          
         
         
         <button id="nextCharacter" class="character_buttons" onclick="changeCharacter(1)">Next</button>
@@ -233,7 +239,22 @@ icon.addEventListener("click", function () {
     getStartedLink.addEventListener("click", function() {
         descText.scrollIntoView({ behavior: "smooth" });
     });
-    </script>
+
+
+    function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.add('element-show');
+      }
+    });
+  }
+  let options = { threshold: [0.5] };
+  let observer = new IntersectionObserver(onEntry, options);
+  let elements = document.querySelectorAll('.element-animation');
+  for (let elm of elements) {
+    observer.observe(elm);
+  }
+      </script>
             
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

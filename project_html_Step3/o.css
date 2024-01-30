@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Josefin+Sans&display=swap');
 
 * {
     margin: 0;
@@ -9,6 +11,8 @@
 body {
     margin: 0;
     overflow-x: hidden;
+    background-attachment: fixed;
+    background-image: url(clouds.jpg);
 }
 
 .header {
@@ -67,6 +71,55 @@ nav {
     background: aqua;
 }
 
+#text1 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: text 3s 1;  
+}
+
+@keyframes text2 {
+    0%{
+      color: rgba(255, 255, 255, 0.677);
+      margin-bottom: -40px;
+    }
+    30%{
+      letter-spacing: 25px;
+      margin-bottom: -40px;
+    }
+    85%{
+      color: rgba(29, 80, 82, 0.677);
+      letter-spacing: 8px;
+      margin-bottom: -40px;
+    }
+}  
+
+
+#text2 {
+    color: text2 #a7cfe4;
+    font-size: 30px;  
+}
+
+
+@keyframes text {
+    0%{
+      color: rgba(255, 255, 255, 0.677);
+      margin-bottom: -40px;
+    }
+    30%{
+      letter-spacing: 25px;
+      margin-bottom: -40px;
+    }
+    85%{
+      letter-spacing: 8px;
+      margin-bottom: -40px;
+    }
+}  
+
+
 .main {
     position: relative;
     top: 300px;
@@ -74,7 +127,13 @@ nav {
 }
 
 .new-page {
-    background-color: #a4cfe5;
+    /* background-color: #a4cfe5; */
+    /* background: url(clouds.jpg); */
+    background: linear-gradient(#b0d2e9, rgb(162, 198, 217), #aeddff);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;	
+
     padding: 50px;
     height: auto;
     display: flex;
@@ -137,6 +196,27 @@ img {
     color: rgb(0, 82, 109);
     font-family: 'Montserrat', sans-serif;
 }
+.element-animation {
+
+    opacity: 0;
+  }
+
+  .element-animation.element-show {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+
+.element-animation {
+
+opacity: 0;
+transform: translateY(100%);
+}
+.element-animation.element-show {
+opacity: 1;
+transition: all 1s;
+transform: translateY(0%);
+}
 
 
 
@@ -187,7 +267,8 @@ img {
 }
 
 .gallery {
-    background-color: #8cb9d0;
+    /* background-color: #8cb9d0; */
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -208,11 +289,19 @@ img {
 
 #abt_briefly {
     background-color: #8cb9d0;
+    /* background: linear-gradient(#b0d2e9, rgb(162, 198, 217), #aeddff); */
+    /* color: linear-gradient(#b0d2e9, rgb(162, 198, 217), #aeddff);   ; */
+    color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(45deg, #6985b3 33%, #7eb2eb 66%, #8AA9D6);
+    color: #73a5f6;
+  
     text-align: center;
     margin: 0;
     /* margin-top: 40px; */
     padding: 40px;
-}
+    font-family: 'Cute Font', sans-serif;
+    font-size: 70PX;
+    }
 .gid {
     margin-top: 10px;
     display: flex;
@@ -220,7 +309,8 @@ img {
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    background-color: #638aa1;
+    /* background-color: #638aa1; */
+
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
 }
 
